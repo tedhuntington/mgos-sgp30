@@ -40,9 +40,14 @@ void sensirion_sleep_usec(uint32_t useconds)
     mgos_msleep((useconds / 1000) + 1);
 }
 
-//bool mgos_sgp30_init(void) {
-//  return true;
-//}
+bool mgos_mgos_sgp30_init(void) {
+  return true;
+}
+
+
+bool mgos_sgp30_init(void) {
+  return true;
+}
 
 bool mgos_sgp30_setup(void)
 {
