@@ -20,7 +20,7 @@ struct mgos_sgp30_data
 
 extern const int MGOS_SGP30_ERROR;
 
-bool mgos_sgp30_init(void);
+//bool mgos_sgp30_init(void);
 bool mgos_sgp30_setup(void);
 int8_t mgos_sgp30_read(struct mgos_sgp30_data* data);
 int mgos_sgp30_read_tvoc(void);

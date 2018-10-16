@@ -8,7 +8,7 @@
 
 const int MGOS_SGP30_ERROR = -128;
 
-void sensirion_i2c_init() {}
+void sensirion_i2c_init(void) {}
 
 int8_t sensirion_i2c_read(uint8_t address, uint8_t* data, uint16_t count)
 {
