@@ -127,5 +127,5 @@ int mgos_sgp30_data_get_co2(const struct mgos_sgp30_data* data)
 
 int mgos_sgp30_set_absolute_humidity(uint32_t absolute_humidity) 
 {
-	(int)return(sgp_set_absolute_humidity(absolute_humidity));
+	return((int)sgp_set_absolute_humidity(absolute_humidity));
 }
