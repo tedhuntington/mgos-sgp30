@@ -30,6 +30,7 @@ struct mgos_sgp30_data* mgos_sgp30_data_create();
 void mgos_sgp30_data_delete(struct mgos_sgp30_data* data);
 int mgos_sgp30_data_get_tvoc(const struct mgos_sgp30_data* data);
 int mgos_sgp30_data_get_co2(const struct mgos_sgp30_data* data);
+int mgos_sgp30_set_absolute_humidity(uint32_t absolute_humidity);
 
 #ifdef __cplusplus
 }

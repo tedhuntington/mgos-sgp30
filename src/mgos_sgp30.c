@@ -54,9 +54,10 @@ bool mgos_sgp30_setup(void)
     s16 err;
     u16 scaled_ethanol_signal, scaled_h2_signal;
 
-    while (sgp_probe() != STATUS_OK) {
+    if (sgp_probe() != STATUS_OK) {
         LOG(LL_INFO, ("SGP30 device not found"));
-        sensirion_sleep_usec(1000000);
+        //sensirion_sleep_usec(1000000);
+		return(0);
     }
     LOG(LL_INFO, ("SGP30 sensor"));
 
@@ -122,4 +123,9 @@ int mgos_sgp30_data_get_tvoc(const struct mgos_sgp30_data* data)
 int mgos_sgp30_data_get_co2(const struct mgos_sgp30_data* data)
 {
     return (NULL != data) ? data->co2 : MGOS_SGP30_ERROR;
+}
+
+int mgos_sgp30_set_absolute_humidity(uint32_t absolute_humidity) 
+{
+	(int)return(sgp_set_absolute_humidity(absolute_humidity));
 }
