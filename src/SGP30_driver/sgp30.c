@@ -656,7 +656,7 @@ s16 sgp_read_signals(u16 *scaled_ethanol_signal, u16 *scaled_h2_signal) {
  * The IAQ baseline should be retrieved and persisted for a faster sensor
  * startup. See sgp_set_iaq_baseline() for further documentation.
  *
- * A valid baseline value is only returned approx. 60min after a call to
+ * A valid baseline value is only returned approx. 15 seconds after a call to
  * sgp_iaq_init() when it is not followed by a call to sgp_set_iaq_baseline()
  * with a valid baseline.
  * This functions returns STATUS_FAIL if the baseline value is not valid.
