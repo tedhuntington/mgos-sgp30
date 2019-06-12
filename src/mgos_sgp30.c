@@ -78,7 +78,7 @@ bool mgos_sgp30_setup(void)
 
 int8_t mgos_sgp30_read(struct mgos_sgp30_data* data)
 {
-    u16 i = 0;
+//tph     u16 i = 0;
     s16 err;
     u16 tvoc_ppb, co2_eq_ppm;
     u32 iaq_baseline;
@@ -91,6 +91,7 @@ int8_t mgos_sgp30_read(struct mgos_sgp30_data* data)
     data->tvoc = tvoc_ppb;
     data->co2 = co2_eq_ppm;
 
+#if 0 //tph
     if (++i % 3600 == 3599) {
         err = sgp_get_iaq_baseline(&iaq_baseline);
         if (err == STATUS_OK) {
@@ -99,7 +100,8 @@ int8_t mgos_sgp30_read(struct mgos_sgp30_data* data)
     }
 
     sensirion_sleep_usec(1000000);
-
+#endif
+	
     return 0;
 }
 
